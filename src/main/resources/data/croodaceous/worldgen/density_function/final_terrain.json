@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:interpolated",
+  "argument": {
+    "type": "minecraft:add",
+    "argument1": "croodaceous:canyons",
+    "argument2": "croodaceous:base_terrain"
+  }
+}
