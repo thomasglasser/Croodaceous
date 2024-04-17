@@ -3,6 +3,10 @@
   "argument": {
     "type": "minecraft:add",
     "argument1": "croodaceous:canyons",
-    "argument2": "croodaceous:base_terrain"
+    "argument2": {
+      "type": "minecraft:add",
+      "argument1": "croodaceous:cliffs",
+      "argument2": "croodaceous:base_terrain"
+    }
   }
 }

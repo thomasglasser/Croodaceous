@@ -3,12 +3,23 @@
   "argument1": {
     "type": "minecraft:y_clamped_gradient",
     "from_y": 128,
-    "to_y": 184,
+    "to_y": 196,
     "from_value": 1,
     "to_value": -2
   },
   "argument2": {
-    "type": "minecraft:abs",
-    "argument": "croodaceous:ridges"
+    "type": "minecraft:mul",
+    "argument1": 5,
+    "argument2": {
+      "type": "minecraft:add",
+      "argument1": {
+        "type": "minecraft:y_clamped_gradient",
+        "from_y": 63,
+        "to_y": 196,
+        "from_value": 1,
+        "to_value": -1
+      },
+      "argument2": "croodaceous:ridges"
+    }
   }
 }

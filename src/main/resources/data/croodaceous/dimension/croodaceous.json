@@ -52,7 +52,7 @@
           }
         },
         {
-          "biome": "minecraft:desert",
+          "biome": "minecraft:sparse_jungle",
           "parameters": {
             "temperature": [
               -1,
@@ -76,7 +76,7 @@
           }
         },
         {
-          "biome": "minecraft:desert",
+          "biome": "minecraft:sparse_jungle",
           "parameters": {
             "temperature": [
               -0.75,
@@ -156,7 +156,7 @@
             ],
             "humidity": [
               -1,
-              1
+              0.5
             ],
             "erosion": [
               -1,
