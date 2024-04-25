@@ -7,10 +7,7 @@
     "sky_color": 16696674,
     "fog_color": 16775106,
     "water_color": 4159204,
-    "water_fog_color": 329011,
-    "grass_color": 5531697,
-    "foliage_color": 5531697,
-    "grass_color_modifier": "none"
+    "water_fog_color": 329011
   },
   "spawners": {
     "creature": [
@@ -37,9 +34,6 @@
   "spawn_costs": {},
   "carvers": {
     "air": [
-      "minecraft:cave",
-      "minecraft:nether_cave",
-      "minecraft:canyon"
     ]
   },
   "features": [
@@ -80,9 +74,7 @@
       "minecraft:underwater_magma",
       "minecraft:disk_sand",
       "minecraft:disk_clay",
-      "minecraft:disk_gravel",
-      "croodaceous:terracotta_patch",
-      "croodaceous:orange_terracotta_patch"
+      "minecraft:disk_gravel"
     ],
     [],
     [

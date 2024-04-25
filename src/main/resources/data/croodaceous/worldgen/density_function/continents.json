@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:add",
+  "argument1": 0.206,
+  "argument2": {
+    "type": "minecraft:mul",
+    "argument1": 5,
+    "argument2": {
+      "type": "minecraft:add",
+      "argument1": -0.248,
+      "argument2": "croodaceous:ridges"
+    }
+  }
+}
