@@ -47,10 +47,10 @@ public class CEBlocks {
 
     // Desert Baobab
     public static final RegistryObject<Block> DESERT_BAOBAB_SAPLING = register("desert_baobab_sapling", () -> new BaobabSaplingBlock(new DesertBaobabTreeGrower(), BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_ORANGE).strength(0).noCollission().sound(SoundType.GRASS)));
-    public static final RegistryObject<Block> STRIPPED_DESERT_BAOBAB_LOG = register("stripped_desert_baobab_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_ORANGE).strength(2.0f).sound(SoundType.WOOD)));
-    public static final RegistryObject<Block> STRIPPED_DESERT_BAOBAB_WOOD = register("stripped_desert_baobab_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_ORANGE).strength(2.0f).sound(SoundType.WOOD)));
-    public static final RegistryObject<Block> DESERT_BAOBAB_LOG = registerRotatedPillar("desert_baobab_log", CEBlocks.STRIPPED_DESERT_BAOBAB_LOG, BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_ORANGE).strength(2.0f).sound(SoundType.WOOD));
-    public static final RegistryObject<Block> DESERT_BAOBAB_WOOD = registerRotatedPillar("desert_baobab_wood", CEBlocks.STRIPPED_DESERT_BAOBAB_WOOD, BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_ORANGE).strength(2.0f).sound(SoundType.WOOD));
+    public static final RegistryObject<Block> STRIPPED_DESERT_BAOBAB_LOG = register("stripped_desert_baobab_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_ORANGE).strength(2.0f).sound(SoundType.WOOD).ignitedByLava()));
+    public static final RegistryObject<Block> STRIPPED_DESERT_BAOBAB_WOOD = register("stripped_desert_baobab_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_ORANGE).strength(2.0f).sound(SoundType.WOOD).ignitedByLava()));
+    public static final RegistryObject<Block> DESERT_BAOBAB_LOG = registerRotatedPillar("desert_baobab_log", CEBlocks.STRIPPED_DESERT_BAOBAB_LOG, BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_ORANGE).strength(2.0f).sound(SoundType.WOOD).ignitedByLava());
+    public static final RegistryObject<Block> DESERT_BAOBAB_WOOD = registerRotatedPillar("desert_baobab_wood", CEBlocks.STRIPPED_DESERT_BAOBAB_WOOD, BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_ORANGE).strength(2.0f).sound(SoundType.WOOD).ignitedByLava());
     public static final RegistryObject<Block> DESERT_BAOBAB_PLANKS = register("desert_baobab_planks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
     public static final RegistryObject<Block> DESERT_BAOBAB_STAIRS = register("desert_baobab_stairs", () -> new StairBlock(() -> DESERT_BAOBAB_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
     public static final RegistryObject<Block> DESERT_BAOBAB_FENCE = register("desert_baobab_fence", () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
@@ -62,7 +62,7 @@ public class CEBlocks {
     public static final RegistryObject<Block> DESERT_BAOBAB_FENCE_GATE = register("desert_baobab_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR), CEWoodTypes.DESERT_BAOBAB));
     public static final RegistryObject<Block> DESERT_BAOBAB_BRANCHES = BLOCKS.register("desert_baobab_branches", () -> new BranchesBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).sound(SoundType.GRASS).noCollission().instabreak()));
     public static final RegistryObject<Block> DESERT_BAOBAB_WALL_BRANCHES = BLOCKS.register("desert_baobab_wall_branches", () -> new BranchesWallBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).sound(SoundType.GRASS).noCollission().instabreak()));
-    public static final RegistryObject<Block> DESERT_BAOBAB_LEAVES = register("desert_baobab_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GREEN).sound(SoundType.GRASS).strength(0.2F).randomTicks().noOcclusion()));
+    public static final RegistryObject<Block> DESERT_BAOBAB_LEAVES = register("desert_baobab_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GREEN).sound(SoundType.GRASS).strength(0.2F).randomTicks().noOcclusion().ignitedByLava()));
 
     // Croodaceous Sand
     public static final RegistryObject<Block> DESOLATE_SAND = register("desolate_sand", () -> new CESandBlock(0xe7ba8a, BlockBehaviour.Properties.of().strength(0.5f).sound(SoundType.SAND)));
