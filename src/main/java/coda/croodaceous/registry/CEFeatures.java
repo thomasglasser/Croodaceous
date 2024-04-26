@@ -1,6 +1,8 @@
 package coda.croodaceous.registry;
 
 import coda.croodaceous.CroodaceousMod;
+import coda.croodaceous.common.world.configurations.AnvilRockConfiguration;
+import coda.croodaceous.common.world.feature.AnvilRockFeature;
 import coda.croodaceous.common.world.feature.ShaleRockFeature;
 import coda.croodaceous.common.world.tree.DesertBaobabFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
@@ -16,6 +18,8 @@ public class CEFeatures {
     //public static final RegistryObject<HoodooFeature> HOODOO = FEATURES.register("hoodoo", HoodooFeature::new);
     public static final RegistryObject<DesertBaobabFeature> DESERT_BAOBAB = FEATURES.register("desert_baobab", DesertBaobabFeature::new);
     public static final RegistryObject<Feature<BlockStateConfiguration>> SHALE_ROCK = FEATURES.register("shale_rock", () -> new ShaleRockFeature(BlockStateConfiguration.CODEC));
+    public static final RegistryObject<Feature<AnvilRockConfiguration>> ANVIL_ROCK = FEATURES.register("anvil_rock", () -> new AnvilRockFeature(AnvilRockConfiguration.CODEC));
+
     //public static final RegistryObject<Feature<NoneFeatureConfiguration>> BONE_PILE = FEATURES.register("bone_pile", BonePileFeature::new);
 
 }

@@ -1,6 +1,6 @@
 {
-  "temperature": 0.8,
-  "downfall": 0.4,
+  "temperature": 0.9,
+  "downfall": 0,
   "has_precipitation": false,
   "temperature_modifier": "none",
   "effects": {
@@ -85,4 +85,3 @@
     ]
   ]
 }
-

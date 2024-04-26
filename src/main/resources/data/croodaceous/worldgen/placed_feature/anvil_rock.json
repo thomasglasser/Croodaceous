@@ -1,14 +1,20 @@
 {
-  "feature": "croodaceous:desert_baobab",
+  "feature": "croodaceous:anvil_rock",
   "placement": [
     {
-      "type": "minecraft:noise_based_count",
-      "noise_to_count_ratio": 1,
-      "noise_factor": 48,
-      "noise_offset": -0.1
+      "chance": 12,
+      "type": "minecraft:rarity_filter"
     },
     {
-      "type": "minecraft:in_square"
+      "type": "minecraft:random_offset",
+      "xz_spread": {
+        "type": "minecraft:uniform",
+        "value": {
+          "min_inclusive": 5,
+          "max_inclusive": 10
+        }
+      },
+      "y_spread": 0
     },
     {
       "type": "minecraft:heightmap",

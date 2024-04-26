@@ -1,0 +1,80 @@
+{
+  "type": "minecraft:range_choice",
+  "input": {
+    "type": "minecraft:y_clamped_gradient",
+    "from_y": 65,
+    "to_y": 66,
+    "from_value": -1,
+    "to_value": 1
+  },
+  "min_inclusive": -1,
+  "max_exclusive": 0,
+  "when_in_range": 0,
+  "when_out_of_range": {
+    "type": "minecraft:range_choice",
+    "input": "croodaceous:temperature",
+    "min_inclusive": -0.22,
+    "max_exclusive": 0.12,
+    "when_in_range": {
+      "type": "minecraft:add",
+      "argument1": 0.6,
+      "argument2": {
+        "type": "minecraft:min",
+        "argument1": -0.6,
+        "argument2": {
+          "type": "minecraft:mul",
+          "argument1": {
+            "type": "minecraft:max",
+            "argument1": {
+              "type": "minecraft:y_clamped_gradient",
+              "from_y": 63,
+              "to_y": 100,
+              "from_value": 0,
+              "to_value": 300
+            },
+            "argument2": {
+              "type": "minecraft:mul",
+              "argument1": {
+                "type": "minecraft:y_clamped_gradient",
+                "from_y": 72,
+                "to_y": 96,
+                "from_value": 0,
+                "to_value": 1500
+              },
+              "argument2": {
+                "type": "minecraft:noise",
+                "noise": "minecraft:gravel",
+                "xz_scale": 15,
+                "y_scale": 5
+              }
+            }
+          },
+          "argument2": {
+            "type": "minecraft:add",
+            "argument1": -0.06,
+            "argument2": {
+              "type": "minecraft:min",
+              "argument1": 0.06,
+              "argument2": {
+                "type": "minecraft:range_choice",
+                "input": "croodaceous:temperature",
+                "min_inclusive": -0.3,
+                "max_exclusive": 0,
+                "when_in_range": {
+                  "type": "minecraft:abs",
+                  "argument": {
+                    "type": "minecraft:add",
+                    "argument1": 0.15,
+                    "argument2": "croodaceous:temperature"
+                  }
+                },
+                "when_out_of_range": 0.15
+              }
+            }
+          }
+        }
+      }
+    },
+    "when_out_of_range": 0
+  }
+}
