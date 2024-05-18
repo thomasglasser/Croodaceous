@@ -158,7 +158,7 @@ public class Jackrobat extends BiphibianAnimal implements GeoEntity {
     public void tick() {
         super.tick();
         // slow falling
-        if(this.getDeltaMovement().y() < 0.0D) {
+        if(this.getDeltaMovement().y() < 0.1D) {
             this.setDeltaMovement(this.getDeltaMovement().multiply(1.0D, 0.85D, 1.0D));
         }
         if (this.hasFollowers() && this.level().random.nextInt(200) == 1) {
@@ -362,7 +362,7 @@ public class Jackrobat extends BiphibianAnimal implements GeoEntity {
     //// ANIMATIONS ////
 
     private <T extends GeoAnimatable> PlayState predicate(AnimationState<T> e) {
-        if(!onGround() && Math.abs(this.getDeltaMovement().y()) > 0.0002F) {
+        if(isFlying()) {
             e.getController().setAnimation(ANIM_FLY);
         } else if(e.isMoving()) {
             e.getController().setAnimation(ANIM_HOP);
@@ -409,8 +409,11 @@ public class Jackrobat extends BiphibianAnimal implements GeoEntity {
     }
 
     public void stopFollowing() {
-        this.leader.removeFollower();
-        this.leader = null;
+        if (this.leader != null)
+        {
+            this.leader.removeFollower();
+            this.leader = null;
+        }
     }
 
     private void addFollower() {
@@ -490,11 +493,6 @@ public class Jackrobat extends BiphibianAnimal implements GeoEntity {
         public WanderGoal(final Jackrobat entity, final double speedModifier) {
             super(entity, speedModifier, 0.19F);
             this.entity = entity;
-        }
-
-        @Override
-        public boolean canUse() {
-            return super.canUse();
         }
 
         @Override
