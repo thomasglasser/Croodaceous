@@ -43,7 +43,7 @@ public class CEBlocks {
 
     // Other
 	public static final RegistryObject<Block> RAMU_NEST = register("ramu_nest", RamuNestBlock::new);
-	public static final RegistryObject<Block> DRY_BUSH = register("dry_bush", () -> new DryBushBlock(BlockBehaviour.Properties.of().instabreak().noCollission().sound(SoundType.GRASS)));
+	public static final RegistryObject<Block> DRY_BUSH = register("dry_bush", () -> new DryBushBlock(BlockBehaviour.Properties.of().replaceable().instabreak().noCollission().sound(SoundType.GRASS)));
 
     // Desert Baobab
     public static final RegistryObject<Block> DESERT_BAOBAB_SAPLING = register("desert_baobab_sapling", () -> new BaobabSaplingBlock(new DesertBaobabTreeGrower(), BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_ORANGE).strength(0).noCollission().sound(SoundType.GRASS)));
